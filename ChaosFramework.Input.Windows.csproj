@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import
+    Project="$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props"
+    Condition="Exists('$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props')"
+    />
+
+  <PropertyGroup>
+    <AssemblyName>ChaosFramework.Input.Windows</AssemblyName>
+    <RootNamespace>ChaosFramework.Input.Windows</RootNamespace>
+    <ProjectGuid>{DE26426E-65EF-41BB-846B-3ED3A6B8E287}</ProjectGuid>
+  </PropertyGroup>
+
+  <!-- Properties -->
+  <Import Project="submodules/ChaosPresets.Targets/Properties/Library.targets" />
+  <Import Project="submodules/ChaosPresets.Targets/Paths/Output/bin.targets" />
+
+  <!-- Configuration and Platform -->
+  <Import Project="submodules/ChaosPresets.Targets/Configurations.targets" />
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' " />
+
+  <!-- Included Files -->
+  <ItemGroup>
+    <Compile Include="source\**\*.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <!-- References -->
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+
+  <!-- Analyzers -->
+  <Import Project="submodules/ChaosPresets.References/Analyzers/ChaosAnalyzers.CleanCode.targets" />
+
+  <!-- Cleanup Task -->
+  <Import Project="submodules/ChaosPresets.References/BuildTasks/ChaosBuild.CodeFormatter.Tasks.ChangedProjectFiles.targets" />
+
+  <!-- Default Targets for Building CSharp Projects -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
