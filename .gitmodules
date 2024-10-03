@@ -1,6 +1,7 @@
 [submodule "submodules/ChaosPresets.References"]
 	path = submodules/ChaosPresets.References
 	url = ../ChaosPresets.References
+	branch = add-chaosframework-input
 [submodule "submodules/ChaosPresets.Targets"]
 	path = submodules/ChaosPresets.Targets
 	url = ../ChaosPresets.Targets
