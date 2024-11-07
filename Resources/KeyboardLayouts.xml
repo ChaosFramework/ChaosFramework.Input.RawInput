@@ -1,0 +1,225 @@
+<Root>
+	<Layout id="QWERTZ_GER">
+		<Modifier id="None">
+			<Key key="A" char="a"/>
+			<Key key="B" char="b"/>
+			<Key key="C" char="c"/>
+			<Key key="D" char="d"/>
+			<Key key="E" char="e"/>
+			<Key key="F" char="f"/>
+			<Key key="G" char="g"/>
+			<Key key="H" char="h"/>
+			<Key key="I" char="i"/>
+			<Key key="J" char="j"/>
+			<Key key="K" char="k"/>
+			<Key key="L" char="l"/>
+			<Key key="M" char="m"/>
+			<Key key="N" char="n"/>
+			<Key key="O" char="o"/>
+			<Key key="P" char="p"/>
+			<Key key="Q" char="q"/>
+			<Key key="R" char="r"/>
+			<Key key="S" char="s"/>
+			<Key key="T" char="t"/>
+			<Key key="U" char="u"/>
+			<Key key="V" char="v"/>
+			<Key key="W" char="w"/>
+			<Key key="X" char="x"/>
+			<Key key="Y" char="z"/>
+			<Key key="Z" char="y"/>
+			<Key key="Apostrophe" char = "ä"/>
+			<Key key="SemiColon" char="ö"/>
+			<Key key="LeftBracket" char="ü"/>
+			<Key key="Tab" char="	"/>
+			<Key key="D0" char="0"/>
+			<Key key="NumPad0" char="0"/>
+			<Key key="D1" char="1"/>
+			<Key key="NumPad1" char="1"/>
+			<Key key="D2" char="2"/>
+			<Key key="NumPad2" char="2"/>
+			<Key key="D3" char="3"/>
+			<Key key="NumPad3" char="3"/>
+			<Key key="D4" char="4"/>
+			<Key key="NumPad4" char="4"/>
+			<Key key="D5" char="5"/>
+			<Key key="NumPad5" char="5"/>
+			<Key key="D6" char="6"/>
+			<Key key="NumPad6" char="6"/>
+			<Key key="D7" char="7"/>
+			<Key key="NumPad7" char="7"/>
+			<Key key="D8" char="8"/>
+			<Key key="NumPad8" char="8"/>
+			<Key key="D9" char="9"/>
+			<Key key="NumPad9" char="9"/>
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+			<Key key="Grave" char="^"/>
+			<Key key="Equals" char="´"/>
+			<Key key="Period" char="."/>
+			<Key key="NumPadPeriod" char=","/>
+			<Key key="Comma" char=","/>
+			<Key key="NumPadPlus" char="+"/>
+			<Key key="NumPadMultiply" char="*"/>
+			<Key key="NumPadMinus" char="-"/>
+			<Key key="NumPadDivide" char="/"/>
+			<Key key="Slash" char="-"/>
+			<Key key="Minus" char="&#223;"/>
+			<Key key="OEM102" char="&lt;"/>
+			<Key key="BackSlash" char="#"/>
+			<Key key="RightBracket" char="+"/>
+		</Modifier>
+		<Modifier id="Shift">
+			<Key key="A" char="A"/>
+			<Key key="B" char="B"/>
+			<Key key="C" char="C"/>
+			<Key key="D" char="D"/>
+			<Key key="E" char="E"/>
+			<Key key="F" char="F"/>
+			<Key key="G" char="G"/>
+			<Key key="H" char="H"/>
+			<Key key="I" char="I"/>
+			<Key key="J" char="J"/>
+			<Key key="K" char="K"/>
+			<Key key="L" char="L"/>
+			<Key key="M" char="M"/>
+			<Key key="N" char="N"/>
+			<Key key="O" char="O"/>
+			<Key key="P" char="P"/>
+			<Key key="Q" char="Q"/>
+			<Key key="R" char="R"/>
+			<Key key="S" char="S"/>
+			<Key key="T" char="T"/>
+			<Key key="U" char="U"/>
+			<Key key="V" char="V"/>
+			<Key key="W" char="W"/>
+			<Key key="X" char="X"/>
+			<Key key="Y" char="Z"/>
+			<Key key="Z" char="Y"/>
+			<Key key="Apostrophe" char = "Ä"/>
+			<Key key="SemiColon" char="Ö"/>
+			<Key key="LeftBracket" char="Ü"/>
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+			<Key key="Grave" char="°"/>
+			<Key key="Equals" char="`"/>
+			<Key key="Slash" char="_"/>
+			<Key key="Minus" char="?"/>
+			<Key key="Period" char=":"/>
+			<Key key="Comma" char=";"/>
+			<Key key="D1" char="!"/>
+			<Key key="D2" char="&#x22;"/>
+			<Key key="D3" char="§"/>
+			<Key key="D4" char="$"/>
+			<Key key="D5" char="%"/>
+			<Key key="D6" char="&amp;"/>
+			<Key key="D7" char="/"/>
+			<Key key="D8" char="("/>
+			<Key key="D9" char=")"/>
+			<Key key="D0" char="="/>
+			<Key key="OEM102" char="&gt;"/>
+			<Key key="BackSlash" char="'"/>
+			<Key key="RightBracket" char="*"/>
+		</Modifier>
+		<Modifier id="Alt">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Shift|Alt">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="AltGr">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+			<Key key="Minus" char="\"/>
+			<Key key="D2" char="²"/>
+			<Key key="D3" char="³"/>
+			<Key key="D7" char="{"/>
+			<Key key="D8" char="["/>
+			<Key key="D9" char="]"/>
+			<Key key="D0" char="}"/>
+			<Key key="OEM102" char="|"/>
+			<Key key="Q" char="@"/>
+			<Key key="E" char="€"/>
+			<Key key="M" char="µ"/>
+			<Key key="RightBracket" char="~"/>
+		</Modifier>
+		<Modifier id="Shift|AltGr">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Alt|AltGr">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Shift|Alt|AltGr">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Shift|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Alt|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+			<Key key="RightBracket" char="~"/>
+		</Modifier>
+		<Modifier id="Shift|Alt|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="AltGr|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Shift|AltGr|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Alt|AltGr|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+		<Modifier id="Shift|Alt|AltGr|Ctrl">
+			<Key key="Space" char=" "/>
+			<Key key="Return" char="&#xA;"/>
+			<Key key="NumPadReturn" char="&#xA;"/>
+			<Key key="BackSpace" char="&#x8;"/>
+		</Modifier>
+	</Layout>
+</Root>
