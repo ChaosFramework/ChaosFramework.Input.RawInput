@@ -36,7 +36,7 @@
   <Import Project="submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Collections.targets" />
   <Import Project="submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Core.targets" />
   <Import Project="submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Input.targets" />
-  <Import Project="submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Input.Windows.RawInput.Sharp.targets" />
+  <Import Project="submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Input.RawInput.Sharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Windows.Forms" />
