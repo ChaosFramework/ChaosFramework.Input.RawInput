@@ -2,7 +2,7 @@ using ChaosUtil.Platform.Windows.WinAPI.winuser;
 using System;
 using System.Windows.Forms;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     public abstract class RawDevice : InputDevice
     {

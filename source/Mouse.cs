@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     using InputEvents;
 

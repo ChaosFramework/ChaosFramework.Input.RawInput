@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     public class WindowsInputDeviceHost : InputDeviceHost
     {

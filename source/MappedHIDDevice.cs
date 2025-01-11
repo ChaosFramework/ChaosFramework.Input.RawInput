@@ -1,6 +1,6 @@
 using System;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     using Layouts;
 

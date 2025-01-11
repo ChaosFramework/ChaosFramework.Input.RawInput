@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SysCol = System.Collections.Generic;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     using Layouts;
 

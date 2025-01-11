@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using Win32 = Microsoft.Win32;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     static class Registry
     {
