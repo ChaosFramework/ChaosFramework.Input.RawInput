@@ -5,13 +5,13 @@ using System.Threading;
 
 namespace ChaosFramework.Input.RawInput
 {
-    public class WindowsInputDeviceHost : InputDeviceHost
+    public class RawInputDeviceHost : InputDeviceHost
     {
         static readonly TimeSpan SLEEP_TIME = new TimeSpan(0, 0, 0, 0, 1);
 
         readonly InputCaptureForm form;
 
-        public WindowsInputDeviceHost(InputContext context)
+        public RawInputDeviceHost(InputContext context)
         {
             form = new InputCaptureForm(context);
         }
