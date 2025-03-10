@@ -6,7 +6,7 @@ using NumberStyles = System.Globalization.NumberStyles;
 using SysCol = System.Collections.Generic;
 using Xml = System.Xml;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     using Layouts;
     using KeyboardLayoutMap = SysCol.Dictionary<KeyboardLayouts, SysCol.Dictionary<Keyboard.Keys, InputChararcters.Axis>>;

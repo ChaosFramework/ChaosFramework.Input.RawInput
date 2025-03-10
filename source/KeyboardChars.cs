@@ -1,9 +1,9 @@
 using ChaosUtil.Reflection;
 using System.Xml;
-using Key = ChaosFramework.Input.Windows.Keyboard.Keys;
+using Key = ChaosFramework.Input.RawInput.Keyboard.Keys;
 using SysCol = System.Collections.Generic;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     using CharacterMap = SysCol.Dictionary<KeyboardLayouts, SysCol.Dictionary<KeyboardChars.Modifier, SysCol.Dictionary<Key, char>>>;
     using KeyMap = SysCol.Dictionary<KeyboardLayouts, SysCol.Dictionary<KeyboardChars.Modifier, Key[]>>;

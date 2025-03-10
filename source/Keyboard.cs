@@ -3,7 +3,7 @@ using ChaosUtil.Platform.Windows.WinAPI.winuser;
 using System;
 using SysCol = System.Collections.Generic;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     using InputEvents;
 

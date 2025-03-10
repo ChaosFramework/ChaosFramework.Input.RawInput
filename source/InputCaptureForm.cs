@@ -1,7 +1,7 @@
 using ChaosUtil.Platform.Windows.WinAPI.winuser;
 using System.Windows.Forms;
 
-namespace ChaosFramework.Input.Windows
+namespace ChaosFramework.Input.RawInput
 {
     public class InputCaptureForm : Form, IMessageFilter
     {

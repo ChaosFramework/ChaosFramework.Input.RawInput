@@ -1,8 +1,8 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ChaosFramework.Input.Windows")]
-[assembly: AssemblyProduct("ChaosFramework.Input.Windows")]
+[assembly: AssemblyTitle("ChaosFramework.Input.RawInput")]
+[assembly: AssemblyProduct("ChaosFramework.Input.RawInput")]
 [assembly: AssemblyCompany("ChaosTechnology")]
 [assembly: AssemblyCopyright("Copyright © ChaosTechnology 2024")]
 

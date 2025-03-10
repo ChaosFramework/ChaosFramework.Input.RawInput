@@ -6,8 +6,8 @@
     />
 
   <PropertyGroup>
-    <AssemblyName>ChaosFramework.Input.Windows</AssemblyName>
-    <RootNamespace>ChaosFramework.Input.Windows</RootNamespace>
+    <AssemblyName>ChaosFramework.Input.RawInput</AssemblyName>
+    <RootNamespace>ChaosFramework.Input.RawInput</RootNamespace>
     <ProjectGuid>{DE26426E-65EF-41BB-846B-3ED3A6B8E287}</ProjectGuid>
   </PropertyGroup>
 
