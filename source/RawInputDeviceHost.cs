@@ -1,7 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
+using SysCol = System.Collections.Generic;
 
 namespace ChaosFramework.Input.RawInput
 {
@@ -16,15 +15,17 @@ namespace ChaosFramework.Input.RawInput
             form = new InputCaptureForm(context);
         }
 
-        void InputDeviceHost.RefreshDeviceList() => form.deviceList.UpdateDeviceList();
+        SysCol.IEnumerable<InputDevice> InputDeviceHost.RefreshDeviceList()
+        {
+            form.deviceList.UpdateDeviceList();
+            foreach (RawDevice impl in form.deviceList)
+                yield return impl.parent;
+        }
 
         void InputDeviceHost.Update()
         {
             System.Windows.Forms.Application.DoEvents();
             Thread.Sleep(SLEEP_TIME);
         }
-
-        IEnumerator<InputDevice> IEnumerable<InputDevice>.GetEnumerator() => form.deviceList.GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => form.deviceList.GetEnumerator();
     }
 }

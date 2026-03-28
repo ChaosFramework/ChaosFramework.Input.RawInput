@@ -1,9 +1,8 @@
+using ChaosUtil.Platform.Windows.WinAPI.winuser;
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using ChaosUtil.Platform.Windows.WinAPI.winuser;
-using Linearstar.Windows.RawInput.Native;
 using SysCol = System.Collections.Generic;
 
 namespace ChaosFramework.Input.RawInput
@@ -133,11 +132,11 @@ namespace ChaosFramework.Input.RawInput
             switch (rid.dwType)
             {
                 case RIM_TYPE.KEYBOARD:
-                    rawDevice = new Keyboard(context);
+                    rawDevice = new RawKeyboard(context).implementation;
                     break;
 
                 case RIM_TYPE.MOUSE:
-                    rawDevice = new Mouse(context);
+                    rawDevice = new RawMouse(context).implementation;
                     break;
 
                 case RIM_TYPE.HID:
@@ -148,13 +147,8 @@ namespace ChaosFramework.Input.RawInput
 
                     uint product = ((uint)deviceInfo.hid.dwVendorId << 16) | (ushort)deviceInfo.hid.dwProductId;
                     HidLayout layout = context.layoutMgr.GetLayout(product);
-                    if (layout != null)
-                    {
-                        Type deviceType = typeof(MappedHidDevice<>).MakeGenericType(layout.enumType);
-                        rawDevice = (MappedHidDevice)Activator.CreateInstance(deviceType, new[] { context });
-                    }
-                    else
-                        rawDevice = new HidDevice(context);
+
+                    rawDevice = new RawHidDevice(context).implementation;
                     break;
 
                 default:
@@ -195,11 +189,7 @@ namespace ChaosFramework.Input.RawInput
             }
 
             if (!RegisterRawInputDevices.Invoke(newDevices))
-            {
-                Win32ErrorException ex = new Win32ErrorException();
-                if ((uint)ex.HResult != 0x80131500) // The operation completed successfully
-                    throw ex;
-            }
+                throw new Linearstar.Windows.RawInput.Native.Win32ErrorException();
         }
 
         public void ProcessMessage(Message message)
