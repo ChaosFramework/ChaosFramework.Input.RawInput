@@ -144,7 +144,7 @@ namespace ChaosFramework.Input.RawInput
                 => $"{hidInfo.GetAxisString()} {(x ? "X" : "Y")} {(sign > 0 ? "positive" : "negative")}";
         }
 
-        public sealed class Implementation(RawHidDevice parent)
+        internal sealed class Implementation(RawHidDevice parent)
             : RawDevice(parent)
         {
             internal RID_DEVICE_INFO info;
@@ -304,7 +304,7 @@ namespace ChaosFramework.Input.RawInput
                     );
         }
 
-        public readonly Implementation implementation;
+        internal readonly Implementation implementation;
 
         readonly Dictionary<uint, RawButtonAxis> buttonAxes = new Dictionary<uint, RawButtonAxis>();
         readonly Dictionary<uint, RawHidPov> povs = new Dictionary<uint, RawHidPov>();

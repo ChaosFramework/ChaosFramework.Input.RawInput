@@ -5,7 +5,7 @@ namespace ChaosFramework.Input.RawInput
 {
     public class InputCaptureForm : Form, IMessageFilter
     {
-        public readonly DeviceList deviceList;
+        internal readonly DeviceList deviceList;
 
         public InputCaptureForm(InputContext input)
         {

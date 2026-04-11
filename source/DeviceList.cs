@@ -9,7 +9,7 @@ namespace ChaosFramework.Input.RawInput
 {
     using Layouts;
 
-    public sealed class DeviceList : SysCol.IEnumerable<RawDevice>
+    internal sealed class DeviceList : SysCol.IEnumerable<RawDevice>
     {
         enum UsageAndPage : uint
         {
