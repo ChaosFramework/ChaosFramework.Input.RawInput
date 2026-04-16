@@ -153,7 +153,7 @@ namespace ChaosFramework.Input.RawInput
             HidPreparsedData pPreparsedData;
             internal string productString;
 
-            readonly RawHidDevice parent;
+            readonly RawHidDevice parent = parent;
 
             internal override void Init(RID_DEVICE_INFO info)
             {
