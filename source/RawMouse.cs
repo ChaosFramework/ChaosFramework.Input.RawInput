@@ -85,7 +85,7 @@ namespace ChaosFramework.Input.RawInput
                 //    AddEvent(new InputChangeEvent<Axis>(internalAxis[(int)MouseParameters.ZPositive], 0, deltaZ));
                 //}
 
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < NUM_BUTTONS; i++)
                     mouse.buttons[i].ProcessRaw(raw.mouse.usButtonFlags);
             }
         }
