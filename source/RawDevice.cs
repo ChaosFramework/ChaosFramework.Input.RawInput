@@ -4,19 +4,17 @@ using System.Windows.Forms;
 
 namespace ChaosFramework.Input.RawInput
 {
-    public abstract class RawDevice : InputDevice
+    internal abstract class RawDevice(InputDevice parent)
     {
-        public RawDevice(InputContext parent)
-            : base(parent)
-        { }
+        internal readonly InputDevice parent = parent;
 
         public IntPtr deviceHandle;
         public string registryDeviceName;
         public string registryDeviceClass;
         public string source;
 
-        public override string deviceName => registryDeviceName;
-        public override string productName => registryDeviceClass;
+        public string deviceName => registryDeviceName;
+        public string productName => registryDeviceClass;
 
         internal abstract void ProcessRaw(RAWINPUT raw, Message message, IntPtr buffer);
         internal abstract void Init(RID_DEVICE_INFO info);
