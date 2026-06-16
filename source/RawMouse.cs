@@ -116,5 +116,15 @@ namespace ChaosFramework.Input.RawInput
 
         public override bool IsConnected()
             => true;
+
+        protected override Wheel GenerateWheel(WheelDirection dir)
+            => new NullWheel(this, dir);
+
+        class NullWheel : Wheel
+        {
+            public NullWheel(Mouse parent, WheelDirection dir)
+                : base(parent, dir)
+            { }
+        }
     }
 }
