@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <PropertyGroup>
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/Paths/Output/Common.targets" />
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/Properties/WindowsOnly.targets" />
+
+  <PropertyGroup Condition="'$(OS)'=='Windows'">
     <TargetFrameworks>net8.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
-
-  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/Paths/Output/Common.targets" />
 </Project>
