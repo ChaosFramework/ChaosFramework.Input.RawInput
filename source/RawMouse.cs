@@ -10,6 +10,9 @@ namespace ChaosFramework.Input.RawInput
         /// <summary> See <see cref="RAWMOUSE.RI_MOUSE"/> as to why. </summary>
         const int NUM_BUTTONS = 5;
 
+        /// <summary> See https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-rawmouse#remarks as to why. </summary>
+        const int WHEEL_DELTA = 120;
+
         public new class Position(InputDevice parent, Direction direction)
             : Mouse.Position(parent, direction)
         {
@@ -80,10 +83,10 @@ namespace ChaosFramework.Input.RawInput
                 }
 
                 if (raw.mouse.usButtonFlags == RAWMOUSE.RI_MOUSE.WHEEL)
-                   mouse.scroll.Increment((float)raw.mouse.usButtonData / 120);
+                   mouse.scroll.Increment((float)raw.mouse.usButtonData / WHEEL_DELTA);
 
                 if (raw.mouse.usButtonFlags == RAWMOUSE.RI_MOUSE.HWHEEL)
-                   mouse.tilt.Increment((float)raw.mouse.usButtonData / 120);
+                   mouse.tilt.Increment((float)raw.mouse.usButtonData / WHEEL_DELTA);
 
                 for (int i = 0; i < NUM_BUTTONS; i++)
                     mouse.buttons[i].ProcessRaw(raw.mouse.usButtonFlags);
