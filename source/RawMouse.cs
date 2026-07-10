@@ -4,7 +4,6 @@ using System.Windows.Forms;
 namespace ChaosFramework.Input.RawInput
 {
     using Collections.Immutable;
-    using InputEvents;
 
     public class RawMouse : Mouse
     {
@@ -52,6 +51,15 @@ namespace ChaosFramework.Input.RawInput
             }
         }
 
+        public new class Wheel(Mouse parent, WheelDirection dir)
+            : Mouse.Wheel(parent, dir)
+        {
+            float abs;
+
+            internal void Increment(float delta)
+                => SetValue<Wheel>(abs += delta);
+        }
+
         internal class RawDeviceImplementation(RawMouse parent)
             : RawDevice(parent)
         {
@@ -71,19 +79,11 @@ namespace ChaosFramework.Input.RawInput
                     mouse.y.ProcessRaw(raw.mouse.lLastY);
                 }
 
-                // TODO: add mousewheel abstraction and support
-                //if (raw.mouse.usButtonFlags == RAWMOUSE.RI_MOUSE.WHEEL)
-                //{
-                //    float dz = (float)raw.mouse.usButtonData / 120;
-                //    deltaZ += dz;
+                if (raw.mouse.usButtonFlags == RAWMOUSE.RI_MOUSE.WHEEL)
+                   mouse.scroll.Increment((float)raw.mouse.usButtonData / 120);
 
-                //    if (raw.mouse.usButtonData < 0)
-                //        internalAxis[(int)MouseParameters.ZNegative].internalValue -= dz;
-                //    else
-                //        internalAxis[(int)MouseParameters.ZPositive].internalValue += dz;
-
-                //    AddEvent(new InputChangeEvent<Axis>(internalAxis[(int)MouseParameters.ZPositive], 0, deltaZ));
-                //}
+                if (raw.mouse.usButtonFlags == RAWMOUSE.RI_MOUSE.HWHEEL)
+                   mouse.tilt.Increment((float)raw.mouse.usButtonData / 120);
 
                 for (int i = 0; i < NUM_BUTTONS; i++)
                     mouse.buttons[i].ProcessRaw(raw.mouse.usButtonFlags);
@@ -94,6 +94,7 @@ namespace ChaosFramework.Input.RawInput
 
         internal Position x, y;
         internal Button[] buttons;
+        internal Wheel scroll, tilt;
 
         public RawMouse(InputContext parent)
             : base(parent)
@@ -117,14 +118,9 @@ namespace ChaosFramework.Input.RawInput
         public override bool IsConnected()
             => true;
 
-        protected override Wheel GenerateWheel(WheelDirection dir)
-            => new NullWheel(this, dir);
-
-        class NullWheel : Wheel
-        {
-            public NullWheel(Mouse parent, WheelDirection dir)
-                : base(parent, dir)
-            { }
-        }
+        protected override Mouse.Wheel GenerateWheel(WheelDirection dir)
+            => dir == WheelDirection.Scroll
+                ? scroll = new Wheel(this, dir)
+                : tilt = new Wheel(this, dir);
     }
 }
