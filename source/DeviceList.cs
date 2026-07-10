@@ -1,9 +1,10 @@
-using ChaosUtil.Platform.Windows.WinAPI.winuser;
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SysCol = System.Collections.Generic;
+using ChaosUtil.Platform.Windows.WinAPI.winuser;
+using Linearstar.Windows.RawInput.Native;
 
 namespace ChaosFramework.Input.RawInput
 {
@@ -189,7 +190,11 @@ namespace ChaosFramework.Input.RawInput
             }
 
             if (!RegisterRawInputDevices.Invoke(newDevices))
-                throw new Linearstar.Windows.RawInput.Native.Win32ErrorException();
+            {
+                Win32ErrorException ex = new Win32ErrorException();
+                if ((uint)ex.HResult != 0x80131500) // The operation completed successfully
+                    throw ex;
+            }
         }
 
         public void ProcessMessage(Message message)
